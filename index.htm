@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+	<title>Math Tex</title>
+	<script type="text/x-mathjax-config">
+	MathJax.Hub.Config({
+		showMathMenu: false,
+		tex2jax: {inlineMath: [['$','$']]}
+	});
+	</script>
+	<script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+	<script>
+	function renderMath() {
+		mathInput = document.getElementById("math_input").value;
+		document.getElementById("math_display").innerText = mathInput;
+		MathJax.Hub.Queue(["Typeset",MathJax.Hub,"math_display"]);
+	}
+	</script>
+	<link rel="stylesheet" type="text/css" href="math_tex.css">
+</head>
+<body>
+	<div id="container">
+	<div id="math_input_div">
+		<textarea id="math_input" autofocus></textarea>
+	</div>
+	<div id="render_button_div">
+		<button id="render_button" onclick="renderMath()">render</button>
+	</div>
+	<div id="math_display"></div>
+</div>
+</body>
+</html>

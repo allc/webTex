@@ -1,0 +1,21 @@
+body {
+	width: 100%;
+}
+#container {
+	max-width: 45em;
+	margin: 0 auto;
+}
+#math_input {
+	width: 100%;
+	height: 15em;
+	font-size: medium;
+}
+#render_button_div {
+	width: 100%;
+}
+#render_button {
+	display: block;
+	width: 30em;
+	margin: 0 auto;
+	font-size: large;
+}
